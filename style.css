@@ -1,0 +1,129 @@
+/* ===========================Fonts====================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ==========================global styles========================= */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    background-color: #E02C6D;
+    color:#ffffff;
+    padding:10px 24px;
+    transition: background-color .3s ease;
+}
+.btn:hover{
+    background-color: #ca193f;
+}
+img{
+    width: 20%;
+}
+
+/* ================================header======================= */
+
+header{
+    background-color:#2D25A0;
+    height: 677px;
+}
+.header-row{
+    width: 1164px;
+    margin: auto;
+}
+
+/* ============navbar=============*/
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-top: 42px;
+}
+
+.nav-links{
+    display: flex;
+}
+.navbar a{
+    color: #ffffff;
+    margin-right:36px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login-btn i{
+ margin-right: 8px;
+}
+
+/* ===============Hero============ */
+
+.hero-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap:102px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.hero-heading{
+font-size: 64px;
+font-weight: 700;
+line-height: 80px;
+color:#ffffff
+}
+.hero-btn{
+    display:inline-block;
+    margin-top: 27px;
+   transition: transform .3s ease;
+}
+.hero-btn:hover{
+   transform: scale(.9);
+}
+.hero-btn i{
+    margin-left: 8px;
+}
+.hero-img{
+    position: relative;
+    z-index: 2;
+}
+.hero-img::before{
+    content: "";
+    background-color: #3DBAFD;
+  position: absolute;
+  left: 16%;
+  top: 0;
+  height: 90%;
+  width: 300px;
+  z-index: -1;
+  border-top-right-radius: 100px;
+} 
+.hero-img::after{
+    content: "";
+  border:2px solid #ffffff;
+  position: absolute;
+  left: 16%;
+  top: 0;
+  height: 92%;
+  width: 300px;
+  margin-left: 30px;
+  margin-top: -20px;
+  z-index: -2;
+  border-top-right-radius: 100px;
+} 
+.hero-img img{
+    width: 95%;
+    transition: all .4s ease;
+ 
+}
+.hero-img:hover img{
+   transform:translate(-20px, -10px);
+}
+
+
