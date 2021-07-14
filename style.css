@@ -27,7 +27,7 @@ p {
   background-color: #e02c6d;
   color: #ffffff;
   padding: 10px 24px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background-color: #ca193f;
@@ -35,7 +35,7 @@ p {
 .action-btn {
   display: inline-block;
   margin-top: 27px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .action-btn:hover {
   transform: scale(0.9);
@@ -59,6 +59,9 @@ header {
 }
 
 /* ============navbar=============*/
+.hambar {
+  display: none;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -69,14 +72,14 @@ header {
 .nav-links {
   display: flex;
 }
-.navbar a {
+.nav-links a {
   color: #ffffff;
   margin-right: 36px;
   font-size: 16px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-.navbar a:hover {
+.nav-links a:hover {
   color: #ca193f;
 }
 .login-btn i {
@@ -105,30 +108,7 @@ header {
   position: relative;
   z-index: 2;
 }
-.hero-img::before {
-  content: "";
-  background-color: #3dbafd;
-  position: absolute;
-  left: 16%;
-  top: 0;
-  height: 90%;
-  width: 300px;
-  z-index: -1;
-  border-top-right-radius: 100px;
-}
-.hero-img::after {
-  content: "";
-  border: 2px solid #ffffff;
-  position: absolute;
-  left: 16%;
-  top: 0;
-  height: 92%;
-  width: 300px;
-  margin-left: 30px;
-  margin-top: -20px;
-  z-index: -2;
-  border-top-right-radius: 100px;
-}
+
 .hero-img img {
   width: 100%;
   transition: all 0.4s ease;
@@ -225,4 +205,155 @@ header {
 .social-media i {
   color: #969bab;
   font-size: 16px;
+}
+.footer-container p{
+  font-size: 18px;
+  color: #000000;
+}
+
+/* ===============================Responsive======================= */
+
+/* ============================Laptop============================= */
+
+@media only screen and (max-width: 1200px) {
+  .header-row {
+    width: calc(100% - 100px);
+  }
+  .hero-container {
+    margin-top: 120px;
+  }
+  .hero-heading {
+    font-size: 54px;
+  }
+  .main-container {
+    width: calc(100% - 100px);
+  }
+  .highlight-heading {
+    font-size: 40px;
+  }
+}
+
+/* ===========================Tablet=============================== */
+
+@media only screen and (max-width: 992px) {
+  .header-row {
+    width: calc(100% - 80px);
+  }
+  .hero-container {
+    margin-top: 120px;
+  }
+  .hero-heading {
+    font-size: 45px;
+  }
+ 
+  .hambar {
+    display: block;
+  }
+  .hambar {
+    cursor: pointer;
+  }
+  .hambar div {
+    background-color: #fff;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .hambar:hover div {
+    background-color: #ca193f;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    background-color: #3a33a1;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease;
+    z-index: 10;
+  }
+  .active {
+    height: 50vh;
+    padding-left: 40px;
+    padding-top: 60px;
+  }
+
+
+  .hero-container {
+    grid-column-gap: 10px;
+  }
+  .main-container {
+    width: calc(100% - 80px);
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .highlight-container {
+    grid-column-gap: 20px;
+  }
+}
+
+/* =========================Mobile and Small Tablet ==================== */
+
+@media only screen and (max-width: 668px) {
+
+  .header-row {
+    width: calc(100% - 32px);
+  }
+  header{
+    height: fit-content;
+    padding-bottom:50px;
+  }
+  .hero-container{
+    margin-top: 80px;
+    grid-template-columns: auto;
+  }
+  .hero-heading {
+    font-size: 50px;
+  }
+  .hero-content .btn{
+    margin-bottom:50px;
+  }
+  .players {
+    margin-top: 47px;
+    grid-template-columns: auto;
+    grid-row-gap: 24px;
+  }
+  .main-container {
+    width: calc(100% - 32px);
+  }
+
+  .highlight-container{
+    margin-top: 60px;
+    grid-template-columns: auto;
+  }
+  .highlight-content .action-btn {
+    margin-top: 24px;
+  }
+  .highlight-content .action-btn {
+    margin-bottom: 29px;
+  }
+  .footer-container {
+    margin-bottom: 147px;
+  }
+  .footer-logo img {
+    max-width: calc(100% - 50px);
+  }
+  .social-media{
+    margin-top: 29px;
+  }
 }

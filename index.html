@@ -20,6 +20,11 @@
       <div class="header-row">
         <!-- ==============Navbar============== -->
         <nav class="navbar">
+          <div class="hambar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <div>
             <ul class="nav-links">
               <li><a href="#">Home</a></li>
@@ -45,7 +50,7 @@
             ></a>
           </div>
           <div class="hero-img">
-            <img src="./img/banner-alt.png" alt="Hero banner" />
+            <img src="./img/banner.png" alt="Hero banner" />
           </div>
         </section>
       </div>
@@ -234,5 +239,19 @@
         <p>Copyright <span>&copy; </span>2022 Football</p>
       </div>
     </footer>
+
+
+
+
+    <!-- ======================JavaScript for Responsive navbar=========== -->
+    <script>
+const hamBurger = document.querySelector(".hambar");
+const navLinks = document.querySelector(".nav-links");
+
+hamBurger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+});
+
+    </script>
   </body>
 </html>
