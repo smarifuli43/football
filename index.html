@@ -221,6 +221,120 @@
           <img src="./img/match.png" alt="" />
         </div>
       </section>
+
+      <!-- ================================Match-time===================== -->
+      <section class="match-container">
+        <h2>MATCHES</h2>
+        <div class="matches">
+          <div class="match">
+            <div class="match-title">
+              <h4>Champions League</h4>
+              <button class="match-btn">LAST MATCH</button>
+            </div>
+            <div class="match-info">
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/arsenal.png" alt="" />
+                  <h5>Arsenal</h5>
+                </div>
+                <div class="team-score">3</div>
+              </div>
+              <h3 class="vs">VS</h3>
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/mancheter.png" alt="" />
+                  <h5>Manchester City</h5>
+                </div>
+                <div class="team-score">1</div>
+              </div>
+            </div>
+          </div>
+          <div class="match">
+            <div class="match-title">
+              <h4>Friendly Match</h4>
+              <button class="match-btn">Current Match</button>
+            </div>
+            <div class="match-info">
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/mancheter.png" alt="" />
+                  <h5>Manchester City</h5>
+                </div>
+                <div class="team-score">3</div>
+              </div>
+              <h3 class="vs">VS</h3>
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/chelsea.png" alt="" />
+                  <h5>Chelsea</h5>
+                </div>
+                <div class="team-score">1</div>
+              </div>
+            </div>
+          </div>
+          <div class="match match-future">
+            <div class="match-title">
+              <h4>Champions League</h4>
+              <button class="match-btn">NEXT MATCH</button>
+            </div>
+
+            <div class="match-info">
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/arsenal.png" alt="" />
+                  <h5>Arsenal</h5>
+                </div>
+              </div>
+              <h3 class="vs">VS</h3>
+              <div class="team">
+                <div class="team-name">
+                  <img src="./img/team/avfc.png" alt="" />
+                  <h5>Aston Villa F.C.</h5>
+                </div>
+              </div>
+              <div class="match-date">
+                <p>20 July, 2021 - 07.00pm BST</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================News===================== -->
+      <section class="news-container">
+        <h3 class="news-heading">Latest news</h3>
+        <div class="latest-news">
+          <div class="news">
+            <div class="news-thumbnail">
+              <img src="./img/news/n1.jpg" alt="" />
+            </div>
+            <div class="news-info">
+              <a href="#" class="news-headline"
+                >Ticket available from tomorrow</a
+              >
+              <p class="publish-time">1 hours ago</p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="news-thumbnail">
+              <img src="./img/news/n2.png" alt="" />
+            </div>
+            <div class="news-info">
+              <a href="#" class="news-headline">All about today's match</a>
+              <p class="publish-time">2 hours ago</p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="news-thumbnail">
+              <img src="./img/news/n3.jpeg" alt="" />
+            </div>
+            <div class="news-info">
+              <a href="#" class="news-headline">Copa America final</a>
+              <p class="publish-time">4 hours ago</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ========================Footer========================== -->
@@ -232,26 +346,22 @@
 
         <div class="social-media">
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-dribbble"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-dribbble"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         <p>Copyright <span>&copy; </span>2022 Football</p>
       </div>
     </footer>
 
-
-
-
     <!-- ======================JavaScript for Responsive navbar=========== -->
     <script>
-const hamBurger = document.querySelector(".hambar");
-const navLinks = document.querySelector(".nav-links");
+      const hamBurger = document.querySelector(".hambar");
+      const navLinks = document.querySelector(".nav-links");
 
-hamBurger.addEventListener("click", function () {
-  navLinks.classList.toggle("active");
-});
-
+      hamBurger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

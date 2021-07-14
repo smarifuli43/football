@@ -44,7 +44,7 @@ p {
   margin-left: 8px;
 }
 img {
-  width: 20%;
+  width: 5%;
 }
 
 /* ================================header======================= */
@@ -153,7 +153,7 @@ header {
 /* ==========================Highlight video======================== */
 .highlight-container {
   margin-top: 150px;
-  margin-bottom: 158px;
+  margin-bottom: 120px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 70px;
@@ -174,6 +174,126 @@ header {
 }
 .highlight-img img {
   width: 100%;
+}
+
+/* ===============================Match time========================== */
+.match-container {
+  border: 10px solid #2d25a0;
+  padding: 0 20px 50px;
+  margin-bottom: 100px;
+}
+.match-container h2 {
+  font-size: 30px;
+  background-color: #ffffff;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  margin-top: -23px;
+  padding: 0 15px 50px;
+}
+.matches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+}
+.match {
+  box-shadow: 0 0 10px -5px #0000005b;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.match-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.match-title h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d25a0;
+  text-transform: uppercase;
+}
+.match-title button {
+  font-size: 12px;
+  border: none;
+  color: #ffffff;
+  background-color: #ca193f;
+  padding: 2px;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team-name {
+  display: flex;
+  align-items: center;
+}
+.team-name img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.team-name h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.team-score {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2d25a0;
+}
+.vs {
+  text-align: center;
+  margin: 15px 0;
+}
+.match-date {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #6c6c6c71;
+}
+.match-future .team {
+  width: 180px;
+  margin: auto;
+}
+
+/* ========================News======================= */
+.news-container {
+  margin-bottom: 100px;
+}
+.news-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.latest-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+}
+.news {
+  box-shadow: 0 0 10px -5px #0000005b;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+.news:hover {
+  box-shadow: 0 0 12px 0px #0000005b;
+}
+.news-thumbnail img {
+  width: 100%;
+  height: 200px;
+}
+.news-info {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.news-headline {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d25a0;
 }
 
 /* ===================================footer=========================== */
@@ -206,7 +326,7 @@ header {
   color: #969bab;
   font-size: 16px;
 }
-.footer-container p{
+.footer-container p {
   font-size: 18px;
   color: #000000;
 }
@@ -245,7 +365,7 @@ header {
   .hero-heading {
     font-size: 45px;
   }
- 
+
   .hambar {
     display: block;
   }
@@ -291,7 +411,6 @@ header {
     padding-top: 60px;
   }
 
-
   .hero-container {
     grid-column-gap: 10px;
   }
@@ -299,34 +418,39 @@ header {
     width: calc(100% - 80px);
   }
 
-  .players {
+  .players,
+  .matches,
+  .latest-news {
     grid-template-columns: repeat(2, 1fr);
   }
   .highlight-container {
     grid-column-gap: 20px;
+  }
+  .matches,
+  .latest-news {
+    grid-row-gap: 20px;
   }
 }
 
 /* =========================Mobile and Small Tablet ==================== */
 
 @media only screen and (max-width: 668px) {
-
   .header-row {
     width: calc(100% - 32px);
   }
-  header{
-    height: fit-content;
-    padding-bottom:50px;
+  header {
+    height: auto;
+    padding-bottom: 60px;
   }
-  .hero-container{
+  .hero-container {
     margin-top: 80px;
     grid-template-columns: auto;
   }
   .hero-heading {
     font-size: 50px;
   }
-  .hero-content .btn{
-    margin-bottom:50px;
+  .hero-content .btn {
+    margin-bottom: 50px;
   }
   .players {
     margin-top: 47px;
@@ -337,23 +461,36 @@ header {
     width: calc(100% - 32px);
   }
 
-  .highlight-container{
+  .highlight-container {
     margin-top: 60px;
     grid-template-columns: auto;
   }
-  .highlight-content .action-btn {
+  .highlight-content .btn {
     margin-top: 24px;
-  }
-  .highlight-content .action-btn {
     margin-bottom: 29px;
   }
+
+  .highlight-container {
+    grid-column-gap: 20px;
+  }
+  .matches,
+  .latest-news {
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+  }
+
+  .news-thumbnail img {
+    width: 100%;
+    height: 300px;
+  }
+
   .footer-container {
     margin-bottom: 147px;
   }
   .footer-logo img {
     max-width: calc(100% - 50px);
   }
-  .social-media{
+  .social-media {
     margin-top: 29px;
   }
 }
